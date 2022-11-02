@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".detail.DetailActivity">
+
+
+    <ImageView
+        android:id="@+id/iv_detail_photo"
+        android:layout_width="254dp"
+        android:layout_height="265dp"
+        android:layout_marginTop="24dp"
+        android:transitionName="photo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars"
+        android:contentDescription="@string/image_preview_cds" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/name"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:transitionName="tv_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_detail_photo" />
+
+
+    <TextView
+        android:id="@+id/tv_detail_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_200"
+        android:textSize="16sp"
+        android:transitionName="name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        tools:text="Foto di Madiun" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/description"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:transitionName="tv_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_detail_name" />
+
+    <TextView
+        android:id="@+id/tv_detail_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_200"
+        android:maxLines="5"
+        android:textSize="16sp"
+        android:transitionName="description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        tools:text="Ini foto liburan di kota madiun" />
+</androidx.constraintlayout.widget.ConstraintLayout>

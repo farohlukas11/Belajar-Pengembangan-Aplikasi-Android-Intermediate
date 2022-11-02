@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".add_story.AddStoryActivity">
+
+    <ImageView
+        android:id="@+id/preview_image_view"
+        android:layout_width="380dp"
+        android:layout_height="343dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_place_holder"
+        android:contentDescription="@string/preview_image" />
+
+    <Button
+        android:id="@+id/btn_camera"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:textSize="14sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/camera"
+        app:layout_constraintStart_toStartOf="@+id/et_description"
+        app:layout_constraintTop_toBottomOf="@+id/et_description" />
+
+    <Button
+        android:id="@+id/btn_gallery"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_marginHorizontal="8dp"
+        android:textSize="12sp"
+        android:layout_marginTop="8dp"
+        android:text="@string/gallery"
+        app:layout_constraintEnd_toStartOf="@+id/btn_add_position"
+        app:layout_constraintStart_toEndOf="@+id/btn_camera"
+        app:layout_constraintTop_toBottomOf="@+id/et_description" />
+
+    <Button
+        android:id="@+id/btn_add_position"
+        android:layout_width="98dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/add_position"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_description" />
+
+    <EditText
+        android:id="@+id/et_description"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:autofillHints="description"
+        android:background="@color/teal_200"
+        android:gravity="start"
+        android:hint="@string/description_enter"
+        android:inputType="text"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/preview_image_view"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Ini foto saat berlibur di Madiun" />
+
+    <Button
+        android:id="@+id/btn_upload"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/upload"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btn_camera"
+        app:layout_constraintTop_toBottomOf="@+id/btn_camera" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
